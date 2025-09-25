@@ -21,12 +21,12 @@ if choice == "A":
         study_hours = study_hours + 5
         stress_level = stress_level - 10
         if stress_level >= 100:
-            print("You've Died")
+            print("You've Died This Level Proceed to next one")
         else:
             if study_hours <= 0:
-                print("You've Died")
+                print("You've Died This Level Proceed to next one")
                 if stress_level >= 100:
-                    print("You've Died")
+                    print("You've Died This Level Proceed to next one")
 elif choice == "B":
     if current_gpa <= 3.0:
         print("You Failed")
@@ -34,9 +34,9 @@ elif choice == "B":
         study_hours = study_hours - 5
         stress_level = stress_level + 10
         if stress_level >= 100:
-            print("You've Died")
+            print("You've Died This Level Proceed to next one")
             if study_hours <= 0:
-                print("You've Died")
+                print("You've Died This Level Proceed to next one")
 elif choice == "C":
     if current_gpa <= 3.5:
         print("You Failed")
@@ -44,9 +44,9 @@ elif choice == "C":
         study_hours = study_hours - 10
         stress_level = stress_level + 20
         if stress_level >= 100:
-            print("You've Died")
+            print("You've Died This Level Proceed to next one")
             if study_hours <= 0:
-                print("You've Died")
+                print("You've Died This Level Proceed to next one")
 else:
     print("Not Valid Try Again")
 
@@ -62,7 +62,7 @@ if choice in study_list:
     current_gpa = current_gpa + 0.2
     social_points -= 20
     if social_points <= 0:
-        print("You've Died")
+        print("You've Died This Level Proceed to next one")
     else:
         print("Go to Next Level")
 elif choice in study_list:
@@ -71,7 +71,7 @@ elif choice in study_list:
     else:
         social_points -= 10
         if social_points <= 0:
-            print("You've Died")
+            print("You've Died This Level Proceed to next one")
         else:
             print("Go to Next Level")
 elif choice in study_list:
@@ -80,7 +80,7 @@ elif choice in study_list:
     else:
         social_points += 10
         if social_points <= 0:
-            print("You've Died")
+            print("You've Died This Level Proceed to next one")
         else:
             print("Go to Next Level")
 elif choice not in study_list:
@@ -89,10 +89,44 @@ elif choice not in study_list:
     else:  
         social_points -= 20
         if social_points < 0 or social_points == 0:
-            print("You've Died")
+            print("You've Died This Level Proceed to next one")
         else:
             print("Go to Next Level")
 else:
+    print("Not Valid Run Again")
+
+print(f"GPA: {current_gpa}\nStudy Hours: {study_hours}\nStress Level: {stress_level}\nSocial Points:{social_points}")
+
+# Step 4: Final Semester Assessment
+
+print("Choose how you commuting:")
+print("A) Walking")  
+print("B) Car")
+print("C) Shuttle")
+
+valid = False
+
+choice = input("Your Choice: ")
+if choice == "A":
+    stress_level is stress_level - 30
+    if current_gpa == 3.0 and stress_level <= 73:
+        print("You've Died on the last Level")
+    else:
+        print("congrats")
+if choice == "B":
+    stress_level is stress_level - 10
+    if current_gpa == 3.0:
+        print("You've Died on the last Level")
+    else:
+        print("congrats")
+if choice == "C":
+    stress_level is stress_level - 20
+    if current_gpa == 3.0 or current_gpa > 3.0:
+        print("You've Died on the last Level")
+    else:
+        print("congrats")
+else:
+    choice is not valid
     print("Not Valid Try Again")
 
 print(f"GPA: {current_gpa}\nStudy Hours: {study_hours}\nStress Level: {stress_level}\nSocial Points:{social_points}")
