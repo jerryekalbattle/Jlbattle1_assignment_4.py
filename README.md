@@ -32,4 +32,8 @@ You choose a subject to study (Python, Math, English, History).
 
 Depending on your transportation you can decrease your stress because when your traveling thats your break from 
 ## How to Run 
+
 python Jlbattle1_assignment_3.py
+
+#AI Citation 
+The only assitance i used is picture of games not the code to get an exsample of where to stop
